@@ -8,14 +8,17 @@ import fr.anatom3000.gwwhit.item.access.CustomToolMaterial;
 import fr.anatom3000.gwwhit.materials.CustomArmorMaterials;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.*;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class ItemRegistry {
     private static final HashMap<String, Item> ITEMS = new HashMap<>() {{
@@ -41,6 +44,8 @@ public class ItemRegistry {
 
        put( "pancakes", new PanCakesItem() );
        put( "yeeter", new YeeterItem() );
+
+       put("taki", new Item(new FabricItemSettings().rarity(Rarity.EPIC).food(new FoodComponent.Builder().saturationModifier(1).statusEffect(new StatusEffectInstance(EffectRegistry.SPICY_EFFECT, 600, 0), 1F).hunger(2).snack().alwaysEdible().build()).group(CustomItemGroups.GWWHIT_GROUP)));
     }};
 
     public static void register() {

@@ -21,7 +21,8 @@
     "IMS212",
     "PheonixVX",
     "KosmX",
-    "solunareclipse1"
+    "solunareclipse1",
+    "Rulft44"
   ],
   "contact": {
     "sources": "https://github.com/anatom3000/GuessWhatWillHappenInThis"
@@ -61,7 +62,8 @@
 
   "suggests": {
     "modmenu": "*",
-    "valleycraft": ">=2.3"
+    "valleycraft": ">=2.3",
+    "jennymod": "*"
   },
 
   "custom": {

@@ -18,6 +18,7 @@
   "item.gwwhit.yeeter": "Yeeter",
   "item.gwwhit.yeeter.tooltip.0": "§7§oWhen i was in school, we had to §d§oyeet§7§o ourselfs in!",
   "item.gwwhit.yeeter.tooltip.1": "§e~Someone",
+  "item.gwwhit.taki": "Taki",
 
   "block.gwwhit.infected_mass": "Infected Mass",
   "block.gwwhit.randomising_block": "Randomising Block",
@@ -32,6 +33,8 @@
 
   "enchantment.gwwhit.swapping_curse": "Curse of Swapping",
   "enchantment.gwwhit.curse_curse": "Curse of Curses",
+
+  "effect.gwwhit.spicy": "Spicy",
 
   "death.attack.gwwhit.pancakes.0": "%s became too sweet for this world",
   "death.attack.gwwhit.pancakes.1": "%s couldn't handle the sweetness of pancakes",
