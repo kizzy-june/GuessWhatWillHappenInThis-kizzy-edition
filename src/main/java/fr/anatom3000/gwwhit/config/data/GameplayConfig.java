@@ -21,12 +21,13 @@ public class GameplayConfig implements ConfigData {
     @SyncOptions(SERVER) public boolean randomizedDrops = false;
     @SyncOptions(SERVER) @Tooltip(count = 2) public boolean dreamLuck = false;
     @SyncOptions(CLIENT) @Tooltip public boolean killCulling = false;
+    @SyncOptions(SERVER) public boolean farlands = false;
 
     public static class Items {
         @SyncOptions(BOTH | SYNCED) public boolean everythingIsEdible = false;
         @SyncOptions(BOTH | SYNCED) @Tooltip public boolean hiddenItemsTab = false;
         @SyncOptions(BOTH | SYNCED) @Tooltip public boolean noHardcodedItemCooldown = false;
-        @SyncOptions(BOTH | SYNCED) @BoundedDiscrete(min = 1, max = 64) public int maxStackSize = 64;
+        @SyncOptions(BOTH | SYNCED) @BoundedDiscrete(min = 1, max = 127) public int maxStackSize = 64;
         @SyncOptions(BOTH | SYNCED) @BoundedDiscrete(min = 1, max = 10) public int yeeterPowerMultiplier = 1;
     }
 

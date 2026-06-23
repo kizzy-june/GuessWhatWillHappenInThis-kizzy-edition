@@ -22,7 +22,8 @@
     "PheonixVX",
     "KosmX",
     "solunareclipse1",
-    "Rulft44"
+    "Rulft44",
+    "kizzy-june"
   ],
   "contact": {
     "sources": "https://github.com/anatom3000/GuessWhatWillHappenInThis"
@@ -44,7 +45,8 @@
     ],
     "libjf:early": [
       "fr.anatom3000.gwwhit.util.ConsoleHacker"
-    ]
+    ],
+    "libjf:asm": ["fr.anatom3000.gwwhit.kizzyjune.Transformer"]
   },
   "mixins": [
     "gwwhit.mixins.json"

@@ -27,6 +27,7 @@ public class RenderingConfig implements ConfigData {
         @SyncOptions(CLIENT | SYNCED) public boolean allowMatrixLevels = true;
         @SyncOptions(CLIENT | SYNCED) public float matrixTranslationScale = 1;
         @SyncOptions(CLIENT | SYNCED) public boolean nauseaOverride = false;
+        @SyncOptions(CLIENT | SYNCED) public boolean stretchVertexBufferz = false;
     }
 
     public static class Entities {
