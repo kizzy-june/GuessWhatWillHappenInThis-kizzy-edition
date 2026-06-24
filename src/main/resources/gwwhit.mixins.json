@@ -22,7 +22,8 @@
 		"gameplay.ServerPlayerEntityMixin",
 		"misc.JsonDataLoaderMixin",
 		"misc.MathHelperMixin",
-		"misc.config.PlayerManagerMixin"
+		"misc.config.PlayerManagerMixin",
+    "gameplay.OctavePerlinNoiseSamplerMixin"
 	],
 	"client": [
 		"access.CreativeInventoryScreenAccess",
@@ -48,7 +49,9 @@
 		"rendering.LivingEntityRendererMixin",
 		"rendering.MatrixStackMixin",
 		"rendering.MixinFrustum",
-		"rendering.PlayerEntityModelMixin"
+		"rendering.PlayerEntityModelMixin",
+    "misc.GameMenuScreenMixin",
+    "rendering.BufferBuilderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

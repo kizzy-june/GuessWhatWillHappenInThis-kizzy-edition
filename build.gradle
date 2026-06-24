@@ -29,8 +29,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    maven { url 'https://gitlab.com/api/v4/projects/25805200/packages/maven' } //https://gitlab.com/jfmods/LibJF
+    maven { url 'https://gitlab.com/api/v4/projects/25805200/packages/maven' }
     maven { url 'https://api.modrinth.com/maven' }
+    maven { url 'https://maven.jfronny.dev/releases' }
     mavenCentral()
 }
 
@@ -47,11 +48,11 @@ dependencies {
 
     modRuntimeOnly modApi("me.shedaniel.cloth:cloth-config-fabric:$cloth_config_version", noFAPI)
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:$rei_version"
-    
+
     // ive had to change this to use curseforge (ew) for the time being due to broken maven nonsense
     //include modImplementation("net.devtech:arrp:$arrp_version") // this should be able to be uncommented once the maven is fixed https://github.com/Devan-Kerman/ARRP/issues/92
     include modImplementation("curse.maven:arrp-463113:3680866-sources-3680393")
-    
+
     include modImplementation("com.enderzombi102:JythonMC:$jythonmc_version")
 
     compileOnly "com.enderzombi102:loadercomplex-api:$lc_version"
@@ -122,9 +123,10 @@ test {
 }
 
 //noinspection UnnecessaryQualifiedReference // The import kept breaking
-task relocateShadowJar(type: com.github.jengelman.gradle.plugins.shadow.tasks.ConfigureShadowRelocation) {
-	target = tasks.shadowJar
-	prefix = 'fr.anatom3000.gwwhit.shadow'
 
+task relocateShadowJar(type: com.github.jengelman.gradle.plugins.shadow.tasks.ConfigureShadowRelocation) {
+    target = tasks.shadowJar
+    prefix = 'fr.anatom3000.gwwhit.shadow'
 }
+
 tasks.shadowJar.dependsOn tasks.relocateShadowJar

@@ -14,7 +14,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
-    @Shadow Overlay overlay;
+    @Shadow
+    Overlay overlay;
     MinecraftClient client = MinecraftClient.getInstance();
 
     @Inject(method = "setOverlay", at = @At("TAIL"))
